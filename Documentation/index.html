@@ -1,0 +1,319 @@
+<html>
+<head>
+<title>USER DOCUMENTATION | SMART HRM </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body{
+background:#E6E6E6;
+font-family: "Arial";
+color:#272822;
+
+}
+h1, footer p{
+	padding-left: 10px;
+	color:#E6E6E6;
+}
+small{
+	font-size: 50%;
+}
+#content{
+	padding-top: 80px;
+	margin-left:350px;
+	position: relative;
+}
+ul.contents{
+	padding-top:5px;
+	padding-bottom:5px;
+	line-height: 25px;
+}
+ul.contents li a, ul.contents li{
+
+	text-decoration: none;
+}
+ul.contents li a:hover{
+	text-decoration: underline;
+}
+
+h2{
+	border-bottom:1px solid #272822;
+	padding-left: 8px;
+}
+
+aside{
+	position:fixed;
+	top:0px;
+	left:0px;
+	background: #3A4651;
+	width:300px;
+	height:100%;
+	color:#E6E6E6;
+}
+aside a{
+	color:#E6E6E6;
+	padding-bottom:5px;
+}
+.big-box{
+	background: #E6E6E6;
+	box-shadow: 1px 0px 10px #E6E6E6;
+	padding:10px;
+	width:90%;
+}
+
+.small-box{
+	background: #FFF;
+	padding:5px;
+	margin-bottom: 25px
+}
+blockquote{
+	padding: 15px;
+	background: #FFF;
+}
+footer{
+	font-size: 75%;
+}
+
+@media (max-width: 680px) {
+aside{
+	position:relative;
+	width:100%;
+	height:auto;
+	
+}
+#content{
+	padding-top:0px;
+	margin-left:2px;
+	position: relative;
+}
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 30px;
+    background: black;
+    color: #FFF;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+#back-to-top:hover {
+    background: #FFF;
+}
+#back-to-top.show {
+    opacity: 1;
+}
+
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>
+if ($('#back-to-top').length) {
+    var scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+}
+</script>
+</head>
+<body>
+
+		
+		
+
+			<aside>
+				<header>
+		<h1>SMART HRM <br /><small>Innovative &amp; Intelligent HR Management</small></h1>
+		</header>
+		<ul class="contents" id="top">
+			<li><a href="#copyrights">Copyrights</a></li>
+			<li><a href="#installation">Installation</a></li>
+			<li><strong>Administrator Login</strong>
+			<ul>
+			<li><a href="#admin-dashboard">Dashboard</a></li>
+			<li><a href="#admin-emp">Employees</a></li>
+			<li><a href="#admin-project">Projects</a></li>
+			<li><a href="#admin-leave">Leave</a></li>
+			<li><a href="#admin-timesheet">Timesheet</a></li>
+			<li><a href="#admin-attendance">Attendance</a></li>
+			<li><a href="#admin-dept">Departments &amp; Postings</a></li>
+			<li><a href="#admin-payroll">Payroll</a></li>
+			<li><a href="#admin-settings">Settings</a></li>
+			<li><a href="#admin-profile">Profile</a></li>
+
+			</ul>
+		</li>
+			<li><strong>Employee Login</strong>
+			<ul>
+			<li><a href="#employee-dashboard">Dashboard</a></li>
+			<li><a href="#employee-leave">Leave</a></li>
+			<li><a href="#employee-timesheet">Timesheet</a></li>
+			<li><a href="#employee-attendance">Attendance</a></li>
+			<li><a href="#employee-payroll">Payroll &amp; Salary Statements</a></li>
+			<li><a href="#employee-password">Change Password</a></li>
+			<li><a href="#employee-profile">Change Profile</a></li>
+			</ul>
+		</li>
+	</ul>
+	
+	<footer>
+<p>&copy; All Rights Reserved. <br />HRM SOFTWORKS</p></footer>
+	</aside>
+<div id="content">	
+	<div class="big-box">
+		<div class="small-box">
+	<a name="copyrights"></a>
+	<h2>Copyrights</h2>
+	<p><strong>Author:</strong> HRM SOFTWORKS<br />
+		<strong>Website:</strong> <a href="https://www.hrmsoftworks.com">HRM Softworks</a></p>
+	</div></div>
+
+<div class="big-box">
+		<div class="small-box">
+<a name="installation"></a>
+<h2>Installation</h2>
+<p><strong>Step#1</strong> Unpack the Script <br />
+	<strong>Step#2</strong> Upload the <code>database.sql</code> to PHPMyadmin. <br />
+	<strong>Step#3</strong> Change the <code>.env</code> in root folder with your database credientials and Change the <code>APP_DEMO</code> to false in Live Server.<br />
+	<strong>Step#4</strong> Change the Permission <code>777</code> to <code>storage</code>, <code>public/photos</code>, <code>public/resume</code> folders. <br />
+
+	<strong>Step#5</strong> Instllation Complete!.</p>
+</div></div>
+
+<div class="big-box">
+<h2>Administator Login <small>HR Administrator Portal</small></h2>
+<div class="small-box">
+<a name="admin-dashboard"></a>
+<h3>Dashboard</h3>
+<p>It used for display the system statistics like total employees, total time worked, total salary paid and top performaners graphical chart. It also displays the current day attendance log.</p>
+</div>
+
+
+<div class="small-box">
+<a name="admin-emp"></a>
+<h3>Employees</h3>
+<p>In this section you can view/edit employees and also appoint new employees for the particular position with their Photo &amp; Resume. Administrator can also download the resume.</p>
+</div>
+
+<div class="small-box">
+<a name="admin-project"></a>
+<h3>Projects</h3>
+<p>This section used for Project Management which is using for add/edit projects and also update the project status</p>
+</div>
+
+<div class="small-box">
+<a name="admin-leave"></a>
+<h3>Leave</h3>
+<p> Here you can access the Leave Requests from Employees and approve/decline the leave requests.</p>
+</div>
+
+<div class="small-box">
+<a name="admin-timesheet"></a>
+<h3>Timesheet</h3>
+<p>SmartHRM offers you a unique tool that can track every second of your employees. Here you can find total logs of all employee's timesheets and update/delete the entries.</p>
+</div>
+
+<div class="small-box">
+<a name="admin-attendance"></a>
+<h3>Attendance</h3>
+<p>Attendance is one of the important factor in smart hrm which is using the attendance tracking of employees in table and calendar view. Here also you can track the guest visits too!</p>
+</div>
+
+<div class="small-box">
+<a name="admin-dept"></a>
+<h3>Departments &amp; Postings</h3>
+<p>This section is used to manage Departments like Administration, Financial, HR and the Postings like Administrator, Accountant, Manager things. You can also view the company hierarchy view.</p>
+</div>
+
+<div class="small-box">
+<a name="admin-payroll"></a>
+<h3>Payroll</h3>
+<p>Payroll which is most important factor in HR software. You can generate Payroll Statements and get printouts of Salary Slips here. Also can view/edit the transactions which is made for salary.</p>
+</div>
+
+<div class="small-box">
+<a name="admin-settings"></a>
+<h3>Settings</h3>
+<p>Smart HRM offers complete customization without any coding skills. You can update the tax%, deduction% and the company details from this settings menu.</p>
+</div>
+<div class="small-box">
+<a name="admin-profile"></a>
+<h3>Profile</h3>
+<p>You can change/update the Administror credientials here.</p>
+</div> </div>
+
+<div class="big-box">
+<h2>Employee Login <small>Employee Self Service</small></h2>
+<code>*You=Employee</code>
+
+<div class="small-box">
+<a name="employee-dashboard"></a>
+<h3>Dashboard</h3>
+<p> It displays how much the particular employee earned, working hours and worksheet performance in graphic view here.</p>
+</div><div class="small-box">
+<a name="employee-leave"></a>
+<h3>Leave</h3>
+<p>You* can view your Leave requests and its status here. As a employee you also can request new leave request here.</p>
+</div>
+
+<div class="small-box">
+<a name="employee-timesheet"></a>
+<h3>Timesheet</h3>
+<p>Its very unique and elegant tool that you can track your work timings with just 2 clicks also can view all of your timesheet logs.</p>
+</div>
+
+<div class="small-box">
+<a name="employee-attendance"></a>
+<h3>Attendance</h3>
+<p>You can simply <strong>Signin</strong> &amp; <strong>Signout</strong> and also you can view your attendance entry in calendar view display.</p>
+</div>
+
+<div class="small-box">
+<a name="employee-payroll"></a>
+<h3>Payroll</h3>
+<p>Here you can find your payroll statements and salary slips. You can easily print your salary slip here.</p>
+</div>
+
+<div class="small-box">
+<a name="employee-password"></a>
+<h3>Password</h3>
+<p>Employee can change his/her password here.</p>
+</div>
+
+<div class="small-box">
+<a name="employee-profile"></a>
+<h3>Profile</h3>
+<p>Employee can view/edit their profile and upload/update their resume &amp; photos here.</p>
+</div>
+</div>
+
+
+<blockquote>If you have any Queries/Feedbacks feel free to contact me @skype: swotsolutions <br >
+For Support, Please use our Support Ticket System via Codecanyon. Thank you,</blockquote>
+	</div>
+<a href="#" id="back-to-top" title="Back to top">Go to TOP</a>	
+</body>
+
+</html>
